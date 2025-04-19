@@ -1,6 +1,7 @@
 
 import React from 'react';
-import AdminDashboard from '@/components/dashboard/AdminDashboard';
+// Updated import path for AdminDashboard
+import AdminDashboard from './dashboards/AdminDashboard'; 
 import { UserRole } from '@/types';
 
 // Mock user role for demonstration

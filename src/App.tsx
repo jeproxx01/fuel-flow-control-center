@@ -15,7 +15,7 @@ import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
-import Landing from "./pages/landing"; // Corrected casing based on previous interaction
+import Landing from "./pages/Landing"; // Corrected path casing
 import Auth from "./pages/Auth";
 
 const queryClient = new QueryClient();
