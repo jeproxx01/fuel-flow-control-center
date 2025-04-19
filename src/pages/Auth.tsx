@@ -22,8 +22,31 @@ const Auth: React.FC = () => {
     // In a real app, you would validate credentials here
     // For demo purposes, we'll just navigate to the dashboard
     
+    // Store the selected role in local storage
+    localStorage.setItem('userRole', selectedRole);
+
     toast.success(`Logged in as ${getRoleDisplayName(selectedRole)}`);
-    navigate('/');
+
+    // Redirect based on the selected role
+    switch (selectedRole) {
+      case UserRole.Admin:
+        navigate('/admin');
+        break;
+      case UserRole.OfficeStaff:
+        navigate('/office');
+        break;
+      case UserRole.DepotStaff:
+        navigate('/depot');
+        break;
+      case UserRole.GSO:
+        navigate('/gso');
+        break;
+      case UserRole.GSOStaff:
+        navigate('/gsostaff');
+        break;
+      default:
+        navigate('/'); // Or a generic unauthorized page
+    }
   };
 
   const getRoleDisplayName = (role: UserRole): string => {
